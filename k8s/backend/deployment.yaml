@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thamires-api
+  labels:
+    app: thamires-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: thamires-api
+  template:
+    metadata:
+      labels:
+        app: thamires-api
+    spec:
+      containers:
+        - name: thamires-api
+          image:  654654369899.dkr.ecr.us-east-1.amazonaws.com/thamires-api:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DB_USER
+              value: "ezuser"
+            - name: DB_PASSWORD
+              value: "ezpass"
+            - name: DB_NAME
+              value: "ezopsdb"
+            - name: DB_HOST
+              value: "terraform-20250808124408005300000001.c3geoy682q08.us-east-1.rds.amazonaws.com"
+            - name: DB_PORT
+              value: "5432"
