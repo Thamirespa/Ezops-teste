@@ -1,7 +1,7 @@
 <template>
   <div class="home page">
     <h1>{{ msg }}</h1>
-    <button @click="isShownModal = true">show modal</button>
+    <button @click="isShownModal = true">show modal 2</button>
     <button @click="showToast">show toast</button>
     <UiModal closeOnOverlay :show.sync="isShownModal">
       <div class="some-modal-content">
