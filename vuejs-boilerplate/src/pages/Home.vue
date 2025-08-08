@@ -60,7 +60,7 @@ export default {
 
   data () {
     return {
-      msg: 'Welcome to Index!!!',
+      msg: 'Welcome to Index Teste!!!',
       isShownModal: false,
       inputError: false,
       checkboxState: false,
